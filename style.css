@@ -1,0 +1,60 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.calc {
+    width: 260px;
+    height: 400px;
+    background-color: #2e2727;
+    border-radius: 10px;
+}
+
+.display {
+    width: 240px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #ebe8e0;
+    font-size: larger;
+    color: #645d56;
+    letter-spacing: 3px;
+    text-indent: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+}
+
+input {
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    height: 70px;
+    width: 24%;
+    margin: 2px;
+    color: #fffbf4;
+    font-size: 35px;    
+}
+
+input:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.number {
+    background-color: #767574;
+}
+
+.operator {
+    background-color: #ffa216;
+}
+
+.eq {
+    background-color: black;
+}
+
+.clear {
+    background-color: #c34646;
+}
