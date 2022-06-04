@@ -1,4 +1,5 @@
 var display = document.getElementsByClassName('display')[0];
+var clickNum = document.getElementsByClassName('number')[0];
 
 var seven = document.getElementsByName('seven')[0];
 var eight = document.getElementsByName('eight')[0];
@@ -32,7 +33,8 @@ minusSign.addEventListener('click', clickMinus);
 timesSign.addEventListener('click', clickTimes);
 divSign.addEventListener('click', clickDiv);
 clear.addEventListener('click', clearScreen);
-equal.addEventListener('click', operate);
+//equal.addEventListener('click', operate);
+equal.addEventListener('click',() => { if (display.value == '') {clearScreen()} else {operate()}});
 
 function clickSeven() {
     display.value += this.value; 
@@ -95,10 +97,12 @@ function clearScreen() {
 }
 
 function operate() {
-    var numbersOnDisplay = display.value;
-    var result = eval(numbersOnDisplay);
-    display.value = result;
+var numbersOnDisplay = display.value;
+const result = eval(numbersOnDisplay);
+display.value = result;
+Object.freeze(result);
 }
+
 
 
  
